@@ -29,10 +29,12 @@ brew install --cask clion
 brew install --cask postman
 
 # install nvm 
-brew install nvm
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
 
 # install node
 nvm install lts
+
+nvm install latest
 
 nvm use lts
 
@@ -43,6 +45,14 @@ npm install --global yarn
 # install git
 
 brew install git
+
+# configure git
+
+git config --global user.name niklasfulle
+
+git config --global user.email placeholder@test.com
+
+git config --global core.editor nano
 
 # install docker
 
