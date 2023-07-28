@@ -57,13 +57,30 @@ brew install --cask docker
 
 # install mongodb
 
-# install mongodb compass
+brew tap mongodb/brew
 
+brew update
+
+brew install mongodb-community@6.0
+
+# to start mongodb
+brew services start mongodb/brew/mongodb-community
+
+# to stop mongodb
+brew services stop mongodb-community@6.0
+
+# install mongodb compass
 brew install --cask mongodb-compass
 
 # install postgresql
 
-brew install postgresql
+brew install postgresql@15
+
+# to start postgresql
+brew services start postgresql@15
+
+# to stop postgresql
+brew services stop postgresql@15
 
 # install pgaadmin
 
