@@ -1,14 +1,11 @@
-# install raycast
-brew install --cask raycast
-
-# install firefox
-brew install --cask firefox
-
 # install brave
 brew install --cask brave-browser
 
 # install chrome
 brew install --cask google-chrome
+
+# install firefox
+brew install --cask firefox
 
 # install vscode
 brew install --cask visual-studio-code
@@ -57,3 +54,17 @@ git config --global core.editor nano
 # install docker
 
 brew install --cask docker
+
+# install mongodb
+
+# install mongodb compass
+
+brew install --cask mongodb-compass
+
+# install postgresql
+
+brew install postgresql
+
+# install pgaadmin
+
+brew install --cask pgadmin4
