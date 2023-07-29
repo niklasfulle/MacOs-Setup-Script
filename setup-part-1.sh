@@ -72,16 +72,8 @@ brew services stop mongodb-community@6.0
 # install mongodb compass
 brew install --cask mongodb-compass
 
-# install postgresql
+# install rust 
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
-brew install postgresql@15
+source "$HOME/.cargo/env"
 
-# to start postgresql
-brew services start postgresql@15
-
-# to stop postgresql
-brew services stop postgresql@15
-
-# install pgaadmin
-
-brew install --cask pgadmin4

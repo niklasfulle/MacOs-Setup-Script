@@ -1,3 +1,6 @@
+# install Iterm2
+brew install --cask iterm2
+
 # install bash
 brew install bash
 

@@ -1,36 +1,15 @@
-# Terminal Setup
+# .bash_profile -*- mode: sh -*-
 
-## Table of Contents
+# Load login settings and environment variables
+if [[ -f ~/.profile ]]; then
+  source ~/.profile
+fi
 
-- [Setup](#setup)
-- [Bash Profile](#bash-profile)
-- [Terminal Look](#terminal-look)
-- [Terminal Shortcuts](#terminal-shortcuts)
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
-## Setup
 
-First install iTerm2 with Homebrew, than Bash with Homebrew.
-Setup Bash as default shell in iTerm2. Than install Oh My Posh with Homebrew.
-Set up the theme in the .bash_profile file. The Profil is located on GitHub.
-Use the .bash_profile file from GitHub and copy it into the home directory.
+eval "$(oh-my-posh init bash --config https://raw.githubusercontent.com/niklasfulle/Windows-Setup-Script/main/terminal/niklasfulle.omp.json)"
 
-## Bash Profile
-
-The Bash Profile incudes the following:
-
-- Git Aliases
-- Aliases
-- Node JS Aliases
-- Path Variables
-- Terminal Look
-
-## Terminal Look
-
-![Terminal](imgs/terminal.png)
-
-## Terminal Shortcuts
-
-```bash
 # ----------------------
 # Git Aliases
 # ----------------------
@@ -154,4 +133,25 @@ alias yb='yarn build'
 alias yd='yarn dev'
 alias ya='yarn add'
 alias yad='yarn add -D'
-```
+
+# -------
+# Path Variables
+# -------
+
+# Added by Toolbox App
+export PATH="$PATH:/Users/niklasfulle/Library/Application Support/JetBrains/Toolbox/scripts"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion‚
+. "$HOME/.cargo/env"
+
+# Java Home Variable
+JAVA_HOME="/Library/Java/JavaVirtualMachines/temurin-19.jdk/Contents/Home"
+PATH="${JAVA_HOME}/bin:${PATH}"
+export PATH
+
+# Maven Home Variable
+export M2_HOME="/Library/Maven/apache-maven-3.9.3"
+PATH="${M2_HOME}/bin:${PATH}"
+export PATH
